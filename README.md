@@ -79,12 +79,24 @@ npm start
 
 ## Environment Variables
 
+### Backend (server/.env)
+
 Create a `.env` file in the `server` directory based on `.env.example`:
 
 ```
 PORT=5000
 NODE_ENV=development
 ```
+
+### Frontend (client/.env)
+
+Create a `.env` file in the `client` directory based on `.env.example`:
+
+```
+VITE_API_URL=http://localhost:5000
+```
+
+This allows you to configure the API URL for different environments (development, staging, production).
 
 ## Tech Stack
 

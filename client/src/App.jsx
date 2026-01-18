@@ -9,7 +9,8 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/status')
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+    fetch(`${apiUrl}/api/status`)
       .then(res => res.json())
       .then(data => {
         setServerStatus(data)
